@@ -1,4 +1,4 @@
-# FORMULARI
+# Formulari
 
 Codi compilat:
 
