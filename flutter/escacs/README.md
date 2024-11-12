@@ -1,3 +1,4 @@
+🔹**escacs**
 El projecte pesa +25MB i no el puc penjar a GitHub.
 
 L'he pujat a Google Drive amb lliure accés: 
