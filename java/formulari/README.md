@@ -1,4 +1,4 @@
-🔹**FORMULARI**
+# FORMULARI
 
 Codi compilat:
 
