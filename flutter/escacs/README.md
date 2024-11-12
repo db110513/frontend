@@ -1,4 +1,4 @@
-🔹**ESCACS**
+# ESCACS
 
 El projecte pesa +25MB i no el puc penjar a GitHub.
 
