@@ -1,4 +1,4 @@
-🔹**CALCULADORA**
+# CALCULADORA
 
 Codi compilat:
 
