@@ -1,1 +1,4 @@
-Directori que conté projectes android fent GUI.
+# Android
+
+Repositori en elaboració... ⚠️
+
