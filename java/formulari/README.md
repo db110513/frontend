@@ -1,5 +1,7 @@
 # Formulari
 
+Conté molts components (JFrame, JPanel, JTextField, JLabel, JComboBox, JRadioButton, JCheckBox, ptionPane.showMessageDialog)
+
 Codi compilat:
 
 
