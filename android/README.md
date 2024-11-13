@@ -1,4 +1,2 @@
-# Android
-
 Repositori en elaboració... ⚠️
 
