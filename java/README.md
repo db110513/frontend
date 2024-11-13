@@ -1,1 +1,3 @@
-Repositori amb projectes Java creats amb la bibliotèeca Swing per tal de fer GUI.
+# Java
+
+Repositori amb projectes fets amb el widget toolkit Swing per crear GUI.
