@@ -16,36 +16,36 @@ public class CompteBancari {
 
     public void dipositar(double quantitat) {
         saldo += quantitat;
-        historial.add("Dipòsit: " + quantitat);
+        historial.add("\nDipòsit: " + quantitat);
     }
 
     public boolean retirar(double quantitat) {
         if (quantitat > saldo) {
-            System.out.println("Saldo insuficient.");
+            System.out.println("\nSaldo insuficient.");
             return false;
         }
         saldo -= quantitat;
-        historial.add("Retirada: " + quantitat);
+        historial.add("\nRetirada: " + quantitat);
         return true;
     }
 
     public boolean transferir(CompteBancari destinatari, double quantitat) {
         if (quantitat > saldo) {
-            System.out.println("Saldo insuficient per transferir.");
+            System.out.println("\nSaldo insuficient per transferir.");
             return false;
         }
         this.retirar(quantitat);
         destinatari.dipositar(quantitat);
-        historial.add("Transferència de " + quantitat + " a compte " + destinatari.getNumeroCompte());
+        historial.add("\nTransferència de " + quantitat + " a compte " + destinatari.getNumeroCompte());
         return true;
     }
 
     public void consultarSaldo() {
-        System.out.println("Saldo actual: " + saldo);
+        System.out.println("\nSaldo actual: " + saldo);
     }
 
     public void mostrarHistorial() {
-        System.out.println("Historial de transaccions:");
+        System.out.println("\nHistorial de transaccions:");
         for (String transaccio : historial) {
             System.out.println(transaccio);
         }

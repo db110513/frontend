@@ -14,7 +14,7 @@ public class Banc {
     public void afegirClient(String nom, String dni) {
         Client client = new Client(nom, dni);
         clients.put(dni, client);
-        System.out.println("Client afegit: " + nom);
+        System.out.println("\nClient afegit: " + nom);
     }
 
     public void afegirCompteBancari(String dni, String numeroCompte, double saldoInicial) {
@@ -22,10 +22,10 @@ public class Banc {
         if (client != null) {
             CompteBancari compte = new CompteBancari(numeroCompte, saldoInicial);
             comptes.put(numeroCompte, compte);
-            System.out.println("Compte creat per al client " + client.getNom());
+            System.out.println("\nCompte creat per al client: " + client.getNom());
         }
         else {
-            System.out.println("Client no trobat.");
+            System.out.println("\nClient no trobat.");
         }
     }
 
@@ -35,7 +35,7 @@ public class Banc {
             System.out.println(client);
         }
         else {
-            System.out.println("Client no trobat.");
+            System.out.println("\nClient no trobat.");
         }
     }
 
@@ -45,7 +45,7 @@ public class Banc {
             compte.consultarSaldo();
             compte.mostrarHistorial();
         } else {
-            System.out.println("Compte no trobat.");
+            System.out.println("\nCompte no trobat.");
         }
     }
 
