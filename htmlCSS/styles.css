@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Apila els elements de dalt a baix */
+    height: 100vh; /* La pàgina ocupa tota la finestra del navegador */
+}
+
+header {
+    background-color: #0618a1;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3442e3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #11075f;
+}
