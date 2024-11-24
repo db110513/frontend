@@ -93,7 +93,11 @@ public class Main {
 
                 default:
                     System.out.println("Opció invàlida. Torna a intentar-ho.");
+
             }
+
         }
+
     }
+
 }
