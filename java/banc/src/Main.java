@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Main {
@@ -8,7 +7,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-
             System.out.println("\nBenvingut al banc DBG !");
             System.out.println("\n\t1. Afegir client");
             System.out.println("\t2. Crear compte bancari");
@@ -19,8 +17,22 @@ public class Main {
             System.out.println("\t7. Sortir");
             System.out.print("\n\tTria una opció: ");
 
-            int opcio = scanner.nextInt();
-            scanner.nextLine();
+            int opcio = -1;
+
+            while (opcio < 1 || opcio > 7) {
+                try {
+                    opcio = scanner.nextInt();
+                    scanner.nextLine();
+
+                    if (opcio < 1 || opcio > 7) {
+                        System.out.println("Opció incorrecta, torna a intentar-ho.");
+                    }
+                }
+                catch (java.util.InputMismatchException e) {
+                    System.out.println("\ndIntrodueix un número entre 1 - 7.");
+                    scanner.nextLine();
+                }
+            }
 
             switch (opcio) {
                 case 1:
@@ -41,6 +53,7 @@ public class Main {
 
                     System.out.print("Introdueix el saldo inicial: ");
                     double saldoInicial = scanner.nextDouble();
+                    scanner.nextLine();
 
                     banc.afegirCompteBancari(dniCompte, numeroCompte, saldoInicial);
                     break;
@@ -51,6 +64,7 @@ public class Main {
 
                     System.out.print("Introdueix la quantitat a dipositar: ");
                     double quantitatDiposit = scanner.nextDouble();
+                    scanner.nextLine();
 
                     banc.dipositar(compteDiposit, quantitatDiposit);
                     break;
@@ -61,6 +75,7 @@ public class Main {
 
                     System.out.print("Introdueix la quantitat a retirar: ");
                     double quantitatRetirada = scanner.nextDouble();
+                    scanner.nextLine();
 
                     banc.retirar(compteRetirada, quantitatRetirada);
                     break;
@@ -74,6 +89,7 @@ public class Main {
 
                     System.out.print("Introdueix la quantitat a transferir: ");
                     double quantitatTransferencia = scanner.nextDouble();
+                    scanner.nextLine();
 
                     banc.transferir(compteOrigen, compteDestinacio, quantitatTransferencia);
                     break;
@@ -92,12 +108,8 @@ public class Main {
                     break;
 
                 default:
-                    System.out.println("Opció invàlida. Torna a intentar-ho.");
-
+                    System.out.println("\nOpció incorrecta, torna a intentar-ho.");
             }
-
         }
-
     }
-
 }
