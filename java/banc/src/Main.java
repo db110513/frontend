@@ -15,43 +15,40 @@ public class Main {
             System.out.println("\t5. Realitzar transferència");
             System.out.println("\t6. Consultar saldo i historial");
             System.out.println("\t7. Sortir");
-            System.out.print("\n\tTria una opció: ");
 
             int opcio = -1;
-
             while (opcio < 1 || opcio > 7) {
+                System.out.print("\n\tTria una opció: ");
                 try {
                     opcio = scanner.nextInt();
-                    scanner.nextLine();
-
+                    scanner.nextLine();  // Consume the newline character
                     if (opcio < 1 || opcio > 7) {
-                        System.out.println("Opció incorrecta, torna a intentar-ho.");
+                        System.out.println("\nOpció incorrecta, torna a intentar-ho.");
                     }
-                }
-                catch (java.util.InputMismatchException e) {
-                    System.out.println("\ndIntrodueix un número entre 1 - 7.");
-                    scanner.nextLine();
+                } catch (java.util.InputMismatchException e) {
+                    System.out.println("\nIntrodueix un número entre 1 i 7.");
+                    scanner.nextLine(); // Clear the invalid input
                 }
             }
 
             switch (opcio) {
                 case 1:
-                    System.out.print("Introdueix el nom del client: ");
+                    System.out.print("\nIntrodueix el nom del client: ");
                     String nomClient = scanner.nextLine();
 
-                    System.out.print("Introdueix el DNI del client: ");
+                    System.out.print("\nIntrodueix el DNI del client: ");
                     String dniClient = scanner.nextLine();
                     banc.afegirClient(nomClient, dniClient);
                     break;
 
                 case 2:
-                    System.out.print("Introdueix el DNI del client per crear el compte: ");
+                    System.out.print("\nIntrodueix el DNI del client per crear el compte: ");
                     String dniCompte = scanner.nextLine();
 
-                    System.out.print("Introdueix el número del compte: ");
+                    System.out.print("\nIntrodueix el número del compte: ");
                     String numeroCompte = scanner.nextLine();
 
-                    System.out.print("Introdueix el saldo inicial: ");
+                    System.out.print("\nIntrodueix el saldo inicial: ");
                     double saldoInicial = scanner.nextDouble();
                     scanner.nextLine();
 
@@ -59,10 +56,10 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.print("Introdueix el número del compte per dipositar: ");
+                    System.out.print("\nIntrodueix el número del compte per dipositar: ");
                     String compteDiposit = scanner.nextLine();
 
-                    System.out.print("Introdueix la quantitat a dipositar: ");
+                    System.out.print("\nIntrodueix la quantitat a dipositar: ");
                     double quantitatDiposit = scanner.nextDouble();
                     scanner.nextLine();
 
@@ -70,10 +67,10 @@ public class Main {
                     break;
 
                 case 4:
-                    System.out.print("Introdueix el número del compte per retirar: ");
+                    System.out.print("\nIntrodueix el número del compte per retirar: ");
                     String compteRetirada = scanner.nextLine();
 
-                    System.out.print("Introdueix la quantitat a retirar: ");
+                    System.out.print("\nIntrodueix la quantitat a retirar: ");
                     double quantitatRetirada = scanner.nextDouble();
                     scanner.nextLine();
 
@@ -81,13 +78,13 @@ public class Main {
                     break;
 
                 case 5:
-                    System.out.print("Introdueix el número del compte d'origen: ");
+                    System.out.print("\nIntrodueix el número del compte d'origen: ");
                     String compteOrigen = scanner.nextLine();
 
-                    System.out.print("Introdueix el número del compte de destinació: ");
+                    System.out.print("\nIntrodueix el número del compte de destinació: ");
                     String compteDestinacio = scanner.nextLine();
 
-                    System.out.print("Introdueix la quantitat a transferir: ");
+                    System.out.print("\nIntrodueix la quantitat a transferir: ");
                     double quantitatTransferencia = scanner.nextDouble();
                     scanner.nextLine();
 
@@ -95,14 +92,14 @@ public class Main {
                     break;
 
                 case 6:
-                    System.out.print("Introdueix el número del compte per consultar el saldo: ");
+                    System.out.print("\nIntrodueix el número del compte per consultar el saldo: ");
                     String compteConsulta = scanner.nextLine();
 
                     banc.mostrarInformacioCompte(compteConsulta);
                     break;
 
                 case 7:
-                    System.out.println("Fins la propera!!");
+                    System.out.println("\nFins la propera!!");
                     scanner.close();
                     System.exit(0);
                     break;
