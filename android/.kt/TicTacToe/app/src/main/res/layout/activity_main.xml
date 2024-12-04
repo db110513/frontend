@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:rowCount="3"
+        android:columnCount="3">
+
+        <!-- Botons per a cada cel·la del joc -->
+        <Button
+            android:id="@+id/button1"
+            style="@style/TicTacToeButton"/>
+        <Button
+            android:id="@+id/button2"
+            style="@style/TicTacToeButton"/>
+        <Button
+            android:id="@+id/button3"
+            style="@style/TicTacToeButton"/>
+        <Button
+            android:id="@+id/button4"
+            style="@style/TicTacToeButton"/>
+        <Button
+            android:id="@+id/button5"
+            style="@style/TicTacToeButton"/>
+        <Button
+            android:id="@+id/button6"
+            style="@style/TicTacToeButton"/>
+        <Button
+            android:id="@+id/button7"
+            style="@style/TicTacToeButton"/>
+        <Button
+            android:id="@+id/button8"
+            style="@style/TicTacToeButton"/>
+        <Button
+            android:id="@+id/button9"
+            style="@style/TicTacToeButton"/>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jugador X, és el teu torn!"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
