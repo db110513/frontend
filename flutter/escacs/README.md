@@ -1,10 +1,3 @@
-# Escacs
-
-El projecte pesa +25MB i no el puc penjar a GitHub.
-
-L'he pujat a Google Drive amb lliure accés: 
-
-[https://drive.google.com/file/d/11WXPKarjygt22gKzesBEgG4UuWsMGoZG/view?usp=drive_link](https://drive.google.com/file/d/1h09_W8-qAMM745BTeh6iLDO4bPgvaPVr/view?usp=sharing)
 
 ### Codi compilat:
 
